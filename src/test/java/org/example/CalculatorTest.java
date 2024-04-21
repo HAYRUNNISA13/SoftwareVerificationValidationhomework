@@ -23,18 +23,8 @@ class CalculatorTest {
     void tearDown() {
     }
     @ParameterizedTest
-    @CsvSource({"10, 2,5"})
-    void testDivide1(int a, int b, int expectedValue) {
-        Calculator calculator = new Calculator();
-        assertEquals(expectedValue, calculator.divide(a, b),
-                "The result of Calculator.add method is incorrect.");
-
-
-
-    }
-    @ParameterizedTest
-    @CsvSource({"10, 4,2.5"})
-    void testdivision2(int a, int b, float expectedValue) {
+    @CsvSource({"10, 2,5","10, 4,2.5","12.5, 2.5,5", "10, 2.5,4", "12.5, 5,2.5"})
+    void testDivide1(float a, float b, float expectedValue) {
         Calculator calculator = new Calculator();
         assertEquals(expectedValue, calculator.divide(a, b),
                 "The result of Calculator.add method is incorrect.");
@@ -43,40 +33,6 @@ class CalculatorTest {
 
     }
 
-
-    @ParameterizedTest
-    @CsvSource({"12.5, 2.5,5"})
-    void testdivision3(float a, float b, float expectedValue) {
-        Calculator calculator = new Calculator();
-        assertEquals(expectedValue, calculator.divide(a, b),
-                "The result of Calculator.add method is incorrect.");
-
-
-
-    }
-
-    @ParameterizedTest
-    @CsvSource({"10, 2.5,4"})
-    void testdivision4(int a, float b, float expectedValue) {
-        Calculator calculator = new Calculator();
-        assertEquals(expectedValue, calculator.divide(a, b),
-                "The result of Calculator.add method is incorrect.");
-
-
-
-    }
-
-
-    @ParameterizedTest
-    @CsvSource({"12.5, 5,2.5"})
-    void testdivision5(float a, int b, float expectedValue) {
-        Calculator calculator = new Calculator();
-        assertEquals(expectedValue, calculator.divide(a, b),
-                "The result of Calculator.add method is incorrect.");
-
-
-
-    }
 
 
     @Test
