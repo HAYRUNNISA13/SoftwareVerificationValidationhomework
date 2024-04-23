@@ -24,16 +24,11 @@ class CalculatorTest {
     }
     @ParameterizedTest
     @CsvSource({"10, 2,5","10, 4,2.5","12.5, 2.5,5", "10, 2.5,4", "12.5, 5,2.5"})
-    void testDivide1(float a, float b, float expectedValue) {
+    void testDivideforhomework(float a, float b, float expectedValue) {
         Calculator calculator = new Calculator();
-        assertEquals(expectedValue, calculator.divide(a, b),
-                "The result of Calculator.add method is incorrect.");
-
-
+        assertEquals(expectedValue, calculator.divide(a, b), "The result of this Test divide method is wrong. You have to check these");
 
     }
-
-
 
     @Test
     void testDivision6() {
