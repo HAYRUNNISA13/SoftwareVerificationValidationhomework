@@ -23,10 +23,12 @@ class CalculatorTest {
     void tearDown() {
     }
     @ParameterizedTest
-    @CsvSource({"10, 2,5","10, 4,2.5","12.5, 2.5,5", "10, 2.5,4", "12.5, 5,2.5"})
-    void testDivideforhomework(float a, float b, float expectedValue) {
+    @CsvSource({"10, 2,5","10, 4,2.5","12.5, 2.5,5", "10, 2.5,4", "12.5, 5,2.5"})// we are gathered together all the values of each of five test together to create a parameterized test
+    void testDivideHomework(float x, float y, float expected) {
         Calculator calculator = new Calculator();
-        assertEquals(expectedValue, calculator.divide(a, b), "The result of this Test divide method is wrong. You have to check these");
+        assertEquals(expected, calculator.divide(x, y), "The result of this divide method is wrong. Try again");
+
+
 
     }
 
